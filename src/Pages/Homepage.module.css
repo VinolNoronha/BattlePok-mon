@@ -1,17 +1,30 @@
 .home {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 3 columns */
-  gap: 60px; /* Space between grid items */
-  justify-items: center; /* Center cards horizontally */
-  align-items: center; /* Center cards vertically */
-  padding: 40px; /* Add some padding */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px;
+  justify-items: center;
+  align-items: center;
+  padding: 40px;
   padding-left: 140px;
 }
 
 .blur {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Space between grid items */
-  padding: 40px; /* Add some padding */
+  gap: 10px;
+  padding: 40px;
   padding-left: 100px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.active {
+  border: 2px solid red;
+  background-color: rgb(190, 63, 70);
+  box-shadow: 0 0 10px red;
 }

@@ -41,16 +41,3 @@
   color: white;
   text-transform: capitalize;
 }
-
-.selected {
-  border: 3px solid yellow; /* Highlight with a yellow border */
-  transform: scale(1.05); /* Slightly enlarge the selected card */
-  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8); /* Add a glowing effect */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
-  opacity: 1;
-}
-
-.unselected {
-  opacity: 0.5; /* Dim the unselected cards */
-  transition: opacity 0.2s ease; /* Smooth transition */
-}

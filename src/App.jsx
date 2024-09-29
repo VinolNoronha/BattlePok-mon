@@ -1,4 +1,5 @@
 import "./App.css";
+import BattleInit from "./Pages/BattleInit";
 import Homepage from "./Pages/Homepage";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -6,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [twoCards, setTwoCards] = useState([]);
 
   //fetching data of the 15 pokemons
   useEffect(function () {
@@ -31,7 +33,18 @@ function App() {
     <div className="size">
       <BrowserRouter>
         <Routes>
-          <Route index element={<Homepage data={data} loading={loading} />} />
+          <Route
+            index
+            element={
+              <Homepage
+                data={data}
+                loading={loading}
+                twoCards={twoCards}
+                setTwoCards={setTwoCards}
+              />
+            }
+          />
+          <Route path="/battle" element={<BattleInit twoCards={twoCards} />} />
         </Routes>
       </BrowserRouter>
     </div>

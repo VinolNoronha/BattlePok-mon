@@ -24,7 +24,7 @@ export default function Card({ obj, onClick, className }) {
   );
 
   return (
-    <div className={`${styles.card} `} onClick={onClick}>
+    <div className={`${styles.card} ${className}`} onClick={onClick}>
       <div className={styles.image}>
         {detailedInfo && detailedInfo[0] && detailedInfo[0].sprites && (
           <img
