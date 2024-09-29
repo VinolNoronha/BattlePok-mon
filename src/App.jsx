@@ -2,7 +2,7 @@ import "./App.css";
 import BattleInit from "./Pages/BattleInit";
 import Homepage from "./Pages/Homepage";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="size">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route
             index
@@ -46,7 +46,7 @@ function App() {
           />
           <Route path="/battle" element={<BattleInit twoCards={twoCards} />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
