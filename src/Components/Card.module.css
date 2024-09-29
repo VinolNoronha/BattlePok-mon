@@ -1,0 +1,56 @@
+.card {
+  width: 180px; /* Set card width */
+  height: 200; /* Increased card height to accommodate larger image */
+  background-color: #212121;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(213, 213, 213, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image {
+  width: 100%; /* Full width of card */
+  height: 70%; /* Increase the height of the image container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #424242;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.image img {
+  max-width: 100%; /* Allow the image to take up more width inside the container */
+  max-height: 400%; /* Increase the max height to make the image larger */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+}
+
+.selected {
+  border: 3px solid yellow; /* Highlight with a yellow border */
+  transform: scale(1.05); /* Slightly enlarge the selected card */
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8); /* Add a glowing effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
+  opacity: 1;
+}
+
+.unselected {
+  opacity: 0.5; /* Dim the unselected cards */
+  transition: opacity 0.2s ease; /* Smooth transition */
+}

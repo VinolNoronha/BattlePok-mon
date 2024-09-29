@@ -1,0 +1,17 @@
+.home {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 3 columns */
+  gap: 60px; /* Space between grid items */
+  justify-items: center; /* Center cards horizontally */
+  align-items: center; /* Center cards vertically */
+  padding: 40px; /* Add some padding */
+  padding-left: 140px;
+}
+
+.blur {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between grid items */
+  padding: 40px; /* Add some padding */
+  padding-left: 100px;
+}
